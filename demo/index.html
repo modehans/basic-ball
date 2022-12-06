@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <style>
+    body {
+      background: #fafafa;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Basic-Ball</h1>
+  <h3 id="info">Click the ball...</h3>
+  <div id="demo">
+    <basic-ball></basic-ball>
+  </div>
+
+  <script type="module" src="../basic-ball.js"></script>
+  <script>
+    const ball = document.querySelector('basic-ball');
+    ball.addEventListener('click', () => {
+      document.getElementById('info').innerHTML = `You clicked the ball! ${ball._value}`;
+    });
+  </script>
+</body>
+
+</html>
